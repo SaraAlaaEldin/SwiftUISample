@@ -134,21 +134,15 @@ extension CGFloat {
     static let xMediumPadding: CGFloat = UIDevice.isPad ? 16 : 12
     static let mediumPadding: CGFloat = UIDevice.isPad ? 20 : 16
     static let largePadding: CGFloat = UIDevice.isPad ? 36 : 32
-    
-    
     static let smallCornerRadius: CGFloat = UIDevice.isPad ? 8 : 4
     static let mediumCornerRadius: CGFloat = UIDevice.isPad ? 12 : 8
     static let largeCornerRadius: CGFloat = UIDevice.isPad ? 14 : 12
-    
     static let navigationBarHeight: CGFloat = UIDevice.getSafeArea?.safeAreaInsets.top ?? 44
     static let statusBarHeight: CGFloat = UIDevice.safeArea
-    
     static let defaultBtnHeight: CGFloat = UIDevice.isPad ? 55 : 50
     static let defaultTxtHeight: CGFloat = UIDevice.isPad ? 50 : 45
     static let defaultDropDownHeight: CGFloat = UIDevice.isPad ? 50 : 45
-
     static let shadowRadius: CGFloat = UIDevice.isPad ? 4 : 2
-    
     static let defaultLogoDimension:CGFloat = UIDevice.isPad ? 500 : 250
     static let defaultImageDimension:CGFloat = UIDevice.isPad ? 200 : 100
 }
