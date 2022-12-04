@@ -17,7 +17,6 @@ class HomeViewModel:ObservableObject{
     @Published var itemsListObject:ListItems?
     @Published var items = [Results]()
     var loadedItemList = PassthroughSubject<[Results],Never>()
-    var loadIEmptyList = PassthroughSubject<Void,Never>()
     var openDetailsScreen = PassthroughSubject<Results,Never>()
     init(dataManager: NetworkRequestProtocol = NetworkRequest.shared){
         self.dataManager = dataManager
@@ -38,7 +37,6 @@ class HomeViewModel:ObservableObject{
                 }
             }else {
                 //MARK:error
-                self?.feildLoadItems()
             }
         }.store(in: &subscriptions)
     }
@@ -46,12 +44,7 @@ class HomeViewModel:ObservableObject{
     func loadListItems(){
         loadedItemList.send(items)
     }
-    
-    func feildLoadItems(){
-        loadIEmptyList.send()
-    }
-  
-    
+        
     func openItemDetails(item:Results){
         openDetailsScreen.send(item)
     }

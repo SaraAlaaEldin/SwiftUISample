@@ -12,10 +12,7 @@ struct ListItemView: View {
     @ObservedObject var viewModel:ListViewModel
     var body: some View {
         HStack(alignment: .center, spacing: .xSmallPadding){
-           
             if let imageURl = URL(string: viewModel.imageURL) {
-//                ImageViewView(withURL: viewModel.imageURL)
-
             let urlRequest = URLRequest(url: imageURl)
             CachedAsyncImage(urlRequest: urlRequest, urlCache: .imageCache){ image in
                 image.resizable()

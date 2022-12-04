@@ -37,10 +37,6 @@ struct HomeView: View {
                     
                     }
                     
-
-
-
-
                     Spacer()
                 }
                 .navigationTitle(Strings.home.rawValue)
